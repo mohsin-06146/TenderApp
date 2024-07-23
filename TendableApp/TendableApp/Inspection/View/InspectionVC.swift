@@ -43,7 +43,8 @@ class InspectionVC: UIViewController {
                     let fileName = "\"inspection\(self.inspection.inspection.id).json\""
                     let alert = UIAlertController(title: Constants.appName, message:  "\(fileName) \(Messages.inspectionSubmit)", preferredStyle: UIAlertController.Style.alert)
                     alert.addAction(UIAlertAction(title: Messages.ok, style: .default, handler: { action in
-                            self.navigationController?.popViewController(animated: true)
+                        self.viewModel.saveIntoHistory(self.inspection)
+                        self.navigationController?.popViewController(animated: true)
                     }))
                     self.present(alert, animated: true, completion: nil)
                 }

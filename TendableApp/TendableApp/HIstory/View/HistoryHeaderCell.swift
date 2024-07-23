@@ -9,12 +9,14 @@ import UIKit
 
 class HistoryHeaderCell: UITableViewHeaderFooterView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBOutlet weak var lblInspectionId: UILabel!
+    @IBOutlet weak var lblInspectionTypeName: UILabel!
+    @IBOutlet weak var lblAreaName: UILabel!
+    @IBOutlet weak var lblTotalScore: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
     }
-    */
 
 }

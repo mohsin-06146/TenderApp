@@ -49,6 +49,26 @@ class CoreDataManager{
         return commanArray
     }
     
+    //MARK: - Fetch Purticular Inspection Data
+    func fetchAllDataForInspection<T>(inspectionId: Int, entityName: String, parameter: T.Type) -> [T] {
+       
+        let managedObjectContext: NSManagedObjectContext = getManagedContext()
+        let fetchRequest   =  NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+        fetchRequest.predicate = NSPredicate(format: "inspectionId == %@", argumentArray: [inspectionId])
+        var commanArray = [T]()
+        
+        fetchRequest.returnsObjectsAsFaults = false
+        do{
+            let fetchedResult = try managedObjectContext.fetch(fetchRequest) as? [T]
+            if let results = fetchedResult{
+                commanArray = results as [T]
+            }
+        } catch {
+        }
+        
+        return commanArray
+    }
+    
     //MARK: - Delet all data of given entity
     func deleteRecordFromDatabase(entityName: String) {
         

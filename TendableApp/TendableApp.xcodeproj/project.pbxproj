@@ -32,6 +32,12 @@
 		B15E526B2C469B4C00319913 /* InspectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B15E526A2C469B4C00319913 /* InspectionCell.xib */; };
 		B15E526C2C469B4C00319913 /* InspectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E52692C469B4C00319913 /* InspectionCell.swift */; };
 		B15E526E2C47BF8C00319913 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E526D2C47BF8C00319913 /* UserModel.swift */; };
+		B1F7B9A32C4F85670076D2CA /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F7B9A22C4F85670076D2CA /* HistoryVC.swift */; };
+		B1F7B9A62C4F86910076D2CA /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F7B9A52C4F86910076D2CA /* HistoryViewModel.swift */; };
+		B1F7B9AA2C4FA93F0076D2CA /* HistoryHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1F7B9A82C4FA93F0076D2CA /* HistoryHeaderCell.xib */; };
+		B1F7B9AC2C4FADD60076D2CA /* HistoryHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F7B9AB2C4FADD60076D2CA /* HistoryHeaderCell.swift */; };
+		B1F7B9AF2C4FB26A0076D2CA /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F7B9AD2C4FB26A0076D2CA /* HistoryCell.swift */; };
+		B1F7B9B02C4FB26A0076D2CA /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1F7B9AE2C4FB26A0076D2CA /* HistoryCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +87,12 @@
 		B15E52692C469B4C00319913 /* InspectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionCell.swift; sourceTree = "<group>"; };
 		B15E526A2C469B4C00319913 /* InspectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InspectionCell.xib; sourceTree = "<group>"; };
 		B15E526D2C47BF8C00319913 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		B1F7B9A22C4F85670076D2CA /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		B1F7B9A52C4F86910076D2CA /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		B1F7B9A82C4FA93F0076D2CA /* HistoryHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryHeaderCell.xib; sourceTree = "<group>"; };
+		B1F7B9AB2C4FADD60076D2CA /* HistoryHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryHeaderCell.swift; sourceTree = "<group>"; };
+		B1F7B9AD2C4FB26A0076D2CA /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		B1F7B9AE2C4FB26A0076D2CA /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +148,7 @@
 				B15E524E2C45748100319913 /* Register */,
 				B15E52552C46269A00319913 /* Main */,
 				B15E525D2C46288600319913 /* Inspection */,
+				B1F7B9A02C4F853E0076D2CA /* HIstory */,
 				B15E52412C4511C800319913 /* Supported Files */,
 				B15E520D2C4507D100319913 /* Main.storyboard */,
 				B15E52132C4507D500319913 /* Assets.xcassets */,
@@ -279,6 +292,35 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		B1F7B9A02C4F853E0076D2CA /* HIstory */ = {
+			isa = PBXGroup;
+			children = (
+				B1F7B9A12C4F85500076D2CA /* View */,
+				B1F7B9A42C4F86780076D2CA /* ViewModel */,
+			);
+			path = HIstory;
+			sourceTree = "<group>";
+		};
+		B1F7B9A12C4F85500076D2CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B1F7B9A22C4F85670076D2CA /* HistoryVC.swift */,
+				B1F7B9AB2C4FADD60076D2CA /* HistoryHeaderCell.swift */,
+				B1F7B9A82C4FA93F0076D2CA /* HistoryHeaderCell.xib */,
+				B1F7B9AD2C4FB26A0076D2CA /* HistoryCell.swift */,
+				B1F7B9AE2C4FB26A0076D2CA /* HistoryCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B1F7B9A42C4F86780076D2CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B1F7B9A52C4F86910076D2CA /* HistoryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -383,9 +425,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1F7B9AA2C4FA93F0076D2CA /* HistoryHeaderCell.xib in Resources */,
 				B15E52142C4507D500319913 /* Assets.xcassets in Resources */,
 				B15E52172C4507D500319913 /* Base in Resources */,
 				B15E520F2C4507D100319913 /* Base in Resources */,
+				B1F7B9B02C4FB26A0076D2CA /* HistoryCell.xib in Resources */,
 				B15E526B2C469B4C00319913 /* InspectionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,12 +463,16 @@
 				B15E52122C4507D100319913 /* TendableApp.xcdatamodeld in Sources */,
 				B15E52622C4628CA00319913 /* InspectionVC.swift in Sources */,
 				B15E52492C45250E00319913 /* NetworkManager.swift in Sources */,
+				B1F7B9A32C4F85670076D2CA /* HistoryVC.swift in Sources */,
+				B1F7B9AC2C4FADD60076D2CA /* HistoryHeaderCell.swift in Sources */,
+				B1F7B9AF2C4FB26A0076D2CA /* HistoryCell.swift in Sources */,
 				B15E52542C46244800319913 /* RegisterViewModel.swift in Sources */,
 				B15E52082C4507D100319913 /* AppDelegate.swift in Sources */,
 				B15E523D2C450D7F00319913 /* LoginVC.swift in Sources */,
 				B15E524D2C4526E000319913 /* Reachability.swift in Sources */,
 				B15E526C2C469B4C00319913 /* InspectionCell.swift in Sources */,
 				B15E52402C45111C00319913 /* LoginViewModel.swift in Sources */,
+				B1F7B9A62C4F86910076D2CA /* HistoryViewModel.swift in Sources */,
 				B15E526E2C47BF8C00319913 /* UserModel.swift in Sources */,
 				B15E52662C463A3600319913 /* InspectionModel.swift in Sources */,
 				B15E52642C4628E900319913 /* InspectionViewModel.swift in Sources */,

@@ -36,6 +36,49 @@ class InspectionViewModel{
         }
     }
     
+    func saveIntoHistory(_ inspection: Inspection){
+        let inspectionId = inspection.inspection.id
+        
+        //Store data in "HistoryQuestionsDB" table for all quesions result for that inspection
+        var historyQuestionsDB : [String: Any] = [:]
+        let categories = inspection.inspection.survey.categories
+        var totalScore: Double = 0
+        for category in categories {
+            let categoryId = category.id
+            let categoryName = category.name
+            for question in category.questions {
+                let questionId = question.id
+                let questionName = question.name
+                let answer = question.answerChoices.filter{ $0.id == question.selectedAnswerChoiceId }.first
+                let resultAnswerScore = answer?.score
+                let resultAnswerId = answer?.id
+                let resultAnswerName = answer?.name
+                totalScore = totalScore + (resultAnswerScore ?? 0.0)
+                historyQuestionsDB["inspectionId"] = inspectionId
+                historyQuestionsDB["categoryId"] = categoryId
+                historyQuestionsDB["categoryName"] = categoryName
+                historyQuestionsDB["questionId"] = questionId
+                historyQuestionsDB["questionName"] = questionName
+                historyQuestionsDB["resultAnswerScore"] = resultAnswerScore
+                historyQuestionsDB["resultAnswerId"] = resultAnswerId
+                historyQuestionsDB["resultAnswerName"] = resultAnswerName
+                dataManeger.insert(entity: "HistoryQuestionsDB", objectToSave: historyQuestionsDB)
+            }
+        }
+        
+        //Store Data in "HistoryDB" table for one inspection
+        var historyDB: [String: Any] = [:]
+        let inspectionName = inspection.inspection.inspectionType.name
+        let areaName = inspection.inspection.area.name
+        let areaId = inspection.inspection.area.id
+        historyDB["inspectionId"] = inspectionId
+        historyDB["inspectionName"] = inspectionName
+        historyDB["areaName"] = areaName
+        historyDB["areaId"] = areaId
+        historyDB["totalScore"] = totalScore
+        dataManeger.insert(entity: "HistoryDB", objectToSave: historyDB)
+    }
+    
     func saveDataInCoreData(response: Inspection){
         let inspection = response.inspection
         

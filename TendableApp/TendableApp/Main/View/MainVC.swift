@@ -45,4 +45,10 @@ class MainVC: UIViewController {
         vc.isFromStart = false
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @IBAction func btnHistoryTapped(_ sender: UIButton){
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "HistoryVC") as! HistoryVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

@@ -23,6 +23,9 @@ class LoginVC: UIViewController {
     //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.txtEmail.text = "mohsin@gmail.com"
+        self.txtPassword.text = "12345678"
     }
     
     //MARK: - Button Actions

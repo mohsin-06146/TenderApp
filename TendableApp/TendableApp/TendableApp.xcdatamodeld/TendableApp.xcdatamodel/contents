@@ -11,6 +11,23 @@
         <attribute name="categoryName" optional="YES" attributeType="String"/>
         <attribute name="inspectionId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
+    <entity name="HistoryDB" representedClassName="HistoryDB" syncable="YES" codeGenerationType="class">
+        <attribute name="areaId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="areaName" optional="YES" attributeType="String"/>
+        <attribute name="inspectionId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="inspectionName" optional="YES" attributeType="String"/>
+        <attribute name="totalScore" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="HistoryQuestionsDB" representedClassName="HistoryQuestionsDB" syncable="YES" codeGenerationType="class">
+        <attribute name="categoryId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="categoryName" optional="YES" attributeType="String"/>
+        <attribute name="inspectionId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="questionId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="questionName" optional="YES" attributeType="String"/>
+        <attribute name="resultAnswerId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="resultAnswerName" optional="YES" attributeType="String"/>
+        <attribute name="resultAnswerScore" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
     <entity name="InspectionDB" representedClassName="InspectionDB" syncable="YES" codeGenerationType="class">
         <attribute name="areaId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="areaName" optional="YES" attributeType="String"/>

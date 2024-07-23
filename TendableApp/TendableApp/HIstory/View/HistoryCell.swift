@@ -9,6 +9,11 @@ import UIKit
 
 class HistoryCell: UITableViewCell {
 
+    @IBOutlet weak var lblCategory: UILabel!
+    @IBOutlet weak var lblScore: UILabel!
+    @IBOutlet weak var lblQuestion: UILabel!
+    @IBOutlet weak var lblAnswer: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
